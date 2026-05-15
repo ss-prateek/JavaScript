@@ -10,6 +10,3 @@ This repository contains my JavaScript learning practice files.
 - `4-loops/` - `for`, `for...in`, `for...of`, `while`, and `do...while` loops.
 - `5-functions/` - Function declarations, parameters, return values, default parameters, and arrow functions.
 
-## How to Run
-
-Open the `index.html` file inside a lesson folder when it is available, or run the lesson's `script.js` file in a JavaScript runtime. Check the browser or terminal console to see the JavaScript output.
