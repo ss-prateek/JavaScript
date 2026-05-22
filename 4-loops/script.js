@@ -36,7 +36,7 @@ console.log("Loops is JS")
 //     i++
 // }
 
-// v) d0-while loop - executes atleast once
+// v) do-while loop - executes atleast once
 
 let i = 10;
 do{

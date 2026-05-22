@@ -11,4 +11,5 @@ This repository contains my JavaScript learning practice files.
 - `5-functions/` - Function declarations, parameters, return values, default parameters, and arrow functions.
 - `6-strings/` - String indexing, template literals, escape sequences, string length, slicing, replacing, concatenation, and immutability.
 - `7-faulty-calculator/` - Browser-based faulty calculator practice using prompts, alerts, random behavior, objects, operators, and expressions.
+- `8-arrays/` - Array basics, mutability, common array methods, array loops, `map()`, `filter()`, `reduce()`, and `Array.from()`.
 
