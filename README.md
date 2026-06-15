@@ -12,4 +12,11 @@ This repository contains my JavaScript learning practice files.
 - `6-strings/` - String indexing, template literals, escape sequences, string length, slicing, replacing, concatenation, and immutability.
 - `7-faulty-calculator/` - Browser-based faulty calculator practice using prompts, alerts, random behavior, objects, operators, and expressions.
 - `8-arrays/` - Array basics, mutability, common array methods, array loops, `map()`, `filter()`, `reduce()`, and `Array.from()`.
-
+- `9-business-name-generator/` - Random business name generator using `Math.random()` and conditional logic.
+- `10-Object-model/` - Browser object model practice with `document`, page title, body access, and inline styles.
+- `11-DOM/` - DOM navigation using child nodes, element children, siblings, and parent elements.
+- `12-selecting-ele/` - Selecting elements by class, ID, tag, CSS selectors, and using `matches()`, `closest()`, and `contains()`.
+- `13-factorial/` - Factorial practice using loops, functions, arrays, `Array.from()`, `slice()`, and `reduce()`.
+- `14-inserting&removing-elements/` - Practice folder for inserting and removing DOM elements.
+- `15-random-color/` - Random color generator for changing element background and text colors.
+- `16-events/` - Event handling practice with mouse events, keyboard events, event bubbling, propagation control, intervals, and timeouts.
