@@ -19,4 +19,6 @@ This repository contains my JavaScript learning practice files.
 - `13-factorial/` - Factorial practice using loops, functions, arrays, `Array.from()`, `slice()`, and `reduce()`.
 - `14-inserting&removing-elements/` - Practice folder for inserting and removing DOM elements.
 - `15-random-color/` - Random color generator for changing element background and text colors.
-- `16-events/` - Event handling practice with mouse events, keyboard events, event bubbling, propagation control, intervals, and timeouts.
+- `16-events&time/` - Event handling practice with mouse events, keyboard events, event bubbling, propagation control, intervals, and timeouts.
+- `17-callback&promises/` - Asynchronous JavaScript practice with `setTimeout()`, callbacks, dynamic script loading, promises, and promise methods.
+- `18-Async,Await&API/` - Async/await practice with promises, `fetch()`, JSON data, and API response handling.
