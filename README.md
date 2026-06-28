@@ -22,3 +22,7 @@ This repository contains my JavaScript learning practice files.
 - `16-events&time/` - Event handling practice with mouse events, keyboard events, event bubbling, propagation control, intervals, and timeouts.
 - `17-callback&promises/` - Asynchronous JavaScript practice with `setTimeout()`, callbacks, dynamic script loading, promises, and promise methods.
 - `18-Async,Await&API/` - Async/await practice with promises, `fetch()`, JSON data, and API response handling.
+- `19-dynamic-website-builder/` - Building a dynamic website using DOM manipulation, templates, and JavaScript-driven content.
+- `20-error-handling/` - Practicing error handling with `try`, `catch`, `finally`, and debugging techniques.
+- `21-OOP/` - Object-oriented programming concepts such as classes, objects, inheritance, and encapsulation.
+- `22-hackers-terminal/` - A terminal-style JavaScript project for interactive command-based practice.
