@@ -25,4 +25,5 @@ This repository contains my JavaScript learning practice files.
 - `19-dynamic-website-builder/` - Building a dynamic website using DOM manipulation, templates, and JavaScript-driven content.
 - `20-error-handling/` - Practicing error handling with `try`, `catch`, `finally`, and debugging techniques.
 - `21-OOP/` - Object-oriented programming concepts such as classes, objects, inheritance, and encapsulation.
-- `22-hackers-terminal/` - A terminal-style JavaScript project for interactive command-based practice.
+- `22-hackers-terminal/` - A terminal-style JavaScript project for interactive command-based practice.\n- `23-Adv-JS/` - Advanced JavaScript practice covering modern concepts, APIs, and dynamic behavior.
+
