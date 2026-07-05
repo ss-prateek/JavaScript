@@ -1,0 +1,48 @@
+<!-- 14. The Window Scroller: You are developing a single-page application with a smooth scrolling effect. Implement a function named smoothScrollToTop that smoothly scrolls the window to the top when called. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="height:2000px;">
+        <button id="bottomBtn">Go to Bottom</button>
+    </div>
+    <button id="topBtn">Go to Top</button>
+
+    <!-- Script part -->
+    <script>
+        function smoothScrollToTop() {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                right: 0,
+                behavior: "smooth"
+            });
+        }
+        const btn1 = document.getElementById("topBtn");
+        btn1.addEventListener("click", smoothScrollToTop);   // addEventListener needs a function reference, not the result of calling the function that is why no smoothScrollToTop()
+
+        function smoothScrollToBottom(){
+            window.scrollTo({
+                top: document.body.scrollHeight, // document.body.scrollHeight -> gives the total height of the webpage
+                left: 0,
+                right: 0,
+                behavior: "smooth"
+            })
+        }
+        const btn2 = document.getElementById("bottomBtn");
+        btn2.addEventListener("click", smoothScrollToBottom)
+        // Here's what each property means:
+        // top: 0 → Scroll to the top of the page.
+        // left: 0 → Scroll to the far left (useful if the page scrolls horizontally).
+        // behavior: "smooth" → Animate the scrolling instead of jumping instantly.
+    </script>
+</body>
+
+</html>

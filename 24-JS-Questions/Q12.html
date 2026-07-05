@@ -1,0 +1,67 @@
+<!-- 12. The Token Manager: You are developing a user authentication system, and you need to manage user authentication tokens. Implement a function named setAuthToken that takes an authentication token and sets it in localStorage with an expiration time. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="generateBtn">Generate Token</button>
+    <input type="text" id="tokenInput">
+    <button id="checkBtn">Check Token</button>
+    <script>
+        function setAuthToken(token) {
+            let expiry = Date.now() + 60 * 1000
+            // Date.now() gives the current time in milliseconds.
+            // Adding 60 * 1000 makes the token expire 1 min from now.
+            let t = {
+                "token": token,
+                "expiry": expiry
+            }
+            localStorage.setItem("token", JSON.stringify(t))
+            alert("Token Generated")
+        }
+        function checkAuthToken(inputToken) {
+            // token is saved as a string in setAuthToken func so we need to get the object from that string and hence we use JSON.parse
+            let auth = JSON.parse(localStorage.getItem("token"));
+
+            // if the auth is empty means there is no token
+            if (!auth) {
+                alert("No token found");
+                return;
+            }
+
+            // checking criterias for valid token
+            if (Date.now() > auth.expiry) {
+                alert("Token expired");
+                localStorage.removeItem("token");
+            } else if(Date.now() <= auth.expiry && auth.token == inputToken) {
+                console.log("Token is valid");
+            }else if(auth.token != inputToken){
+                alert("Invalid token");
+            }
+        }
+
+        // the html button which when clicked calls setAuthToken func
+        const btn = document.getElementById("generateBtn");
+        btn.addEventListener("click", () => {
+            let token = Math.floor(Math.random() * 9000) + 1000;    // token is a randome number btw 1000 to 9999
+            setAuthToken(token);    // we set the token
+        });
+
+        // the html ele which takes the token input 
+        const input = document.getElementById("tokenInput");
+        // the html button which calls checkAuthToken 
+        const checkBtn = document.getElementById("checkBtn");
+        checkBtn.addEventListener("click", () => {
+            checkAuthToken(input.value);    // input.value has the text we enter and check the token validity 
+        });
+
+    </script>
+</body>
+
+</html>

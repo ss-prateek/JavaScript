@@ -1,0 +1,98 @@
+<!-- 13. The Shopping Cart Totalizer: You are working on an e-commerce website, and you need to calculate the total cost of itemss in the shopping cart. Implement a function named calculateTotal that takes an array of products with prices and quantities and returns the total cost. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- this displays the items and their prices -->
+    <div class="display_items">
+        <div class="laptop">Laptop - 55000/- </div>
+        <div class="mouse">Mouse - 800/- </div>
+        <div class="keyboard">Keyboard - 3500/- </div>
+        <div class="drive">Drive - 700/- </div>
+        <div class="monitor">Monitor - 12000/-</div>
+        <div class="headphones">Headphones - 2500/-</div>
+        <div class="webcam">Webcam - 1800/-</div>
+        <div class="lamp">Lamp - 900/-</div>
+    </div>
+    <!-- we've create a button to add items -->
+    <div class="items_buttons">
+        <button id="laptop_button">Laptop +</button>
+        <button id="mouse_button">Mouse +</button>
+        <button id="keyboard_button">Keyboard +</button>
+        <button id="drive_button">Drive +</button>
+        <button id="monitor_button">Monitor +</button>
+        <button id="headphones_button">Headphones +</button>
+        <button id="webcam_button">Webcam +</button>
+        <button id="lamp_button">Lamp +</button>
+    </div>
+    <!-- this button is to finally calculate the total i.e., calls calculateTotal func -->
+    <button id="total">Calculate Total</button>
+    <!-- this dispalys the total of the items on the webpage -->
+    <p id="result"></p>
+    <script>
+        // this func is to calculate the total
+        function calculateTotal(items) {
+            let total = 0
+            for (const i of items) {
+                total = total + (i.price * i.quantity)
+            }
+            console.log("Your total is : " + total)
+            // we add this in the webpage
+            document.getElementById("result").textContent = "Your total is ₹" + total;
+        }
+        // this func is to update quantity of items
+        function additems(productName) {
+            for (const i of items) {
+                if (i.name === productName) {
+                    i.quantity++;
+                    break;
+                }
+            }
+        }
+        let items = [
+            { name: "Laptop", price: 55000, quantity: 0 },
+            { name: "Mouse", price: 800, quantity: 0 },
+            { name: "Keyboard", price: 3500, quantity: 0 },
+            { name: "Drive", price: 700, quantity: 0 },
+            { name: "Monitor", price: 12000, quantity: 0 },
+            { name: "Headphones", price: 2500, quantity: 0 },
+            { name: "Webcam", price: 1800, quantity: 0 },
+            { name: "Lamp", price: 900, quantity: 0 }
+        ]
+        // we target each button created and add an event to upate the quantity of item when clicked
+        const laptop = document.getElementById("laptop_button")
+        laptop.addEventListener("click", () => additems("Laptop"))
+        const mouse = document.getElementById("mouse_button")
+        mouse.addEventListener("click", () => additems("Mouse"))
+        const keyboard = document.getElementById("keyboard_button")
+        keyboard.addEventListener("click", () => additems("Keyboard"))
+        const drive = document.getElementById("drive_button")
+        drive.addEventListener("click", () => additems("Drive"))
+        const monitor = document.getElementById("monitor_button")
+        monitor.addEventListener("click", () => additems("Monitor"))
+        const headphones = document.getElementById("headphones_button")
+        headphones.addEventListener("click", () => additems("Headphones"))
+        const webcam = document.getElementById("webcam_button")
+        webcam.addEventListener("click", () => additems("Webcam"))
+        const lamp = document.getElementById("lamp_button")
+        lamp.addEventListener("click", () => additems("Lamp"))
+
+        // we target this button and add an event to call the calculateTotal func + show quantity of the items on the console
+        const calTotal = document.getElementById("total")
+        calTotal.addEventListener("click", () => {
+            for (const i of items) {
+                console.log(i.name + " : " + i.quantity);
+            }
+            calculateTotal(items)
+        })
+    </script>
+</body>
+
+</html>
